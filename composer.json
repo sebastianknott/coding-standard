@@ -2,6 +2,7 @@
     "name": "sebastianknott/coding-standard",
     "description": "This is my very own coding-standard. A mellow mix between Slevomat and PSR-12.",
     "type": "phpcodesniffer-standard",
+    "license":"GPL-3.0-only",
     "authors": [
         {
             "name": "Sebastian Knott",
