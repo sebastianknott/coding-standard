@@ -1,0 +1,30 @@
+{
+    "name": "sebastianknott/coding-standard",
+    "description": "This is my very own coding-standard. A mellow mix between Slevomat and PSR-12.",
+    "type": "phpcodesniffer-standard",
+    "authors": [
+        {
+            "name": "Sebastian Knott",
+            "email": "sebastian@sebastianknott.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "slevomat/coding-standard": "^6.3.2",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "@dev",
+        "sensiolabs/security-checker": ">2",
+        "hirak/prestissimo": "^0.3.10"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SebastianKnott\\CodingStandard\\Test\\": "test/"
+        }
+    },
+    "config": {
+        "sort-packages" : true
+    }
+}
