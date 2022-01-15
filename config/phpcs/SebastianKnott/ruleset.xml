@@ -37,7 +37,7 @@
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="Generic.Classes.DuplicateClassName"/>
     <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
-    <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedCATCH">
+    <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedCatch">
         <severity>0</severity>
     </rule>
     <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
@@ -144,8 +144,8 @@
         <properties>
             <property name="minLinesCountBeforeWithComment" value="1"/>
             <property name="maxLinesCountBeforeWithComment" value="1"/>
-            <property name="minLinesCountBeforeWithoutComment" value="1"/>
-            <property name="maxLinesCountBeforeWithoutComment" value="1"/>
+            <property name="minLinesCountBeforeWithoutComment" value="0"/>
+            <property name="maxLinesCountBeforeWithoutComment" value="0"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
@@ -205,6 +205,7 @@
     <rule ref="SlevomatCodingStandard.PHP.UselessParentheses"/>
     <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
     <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="newlinesCountBetweenOpenTagAndDeclare" type="int" value="2"/>
@@ -222,7 +223,6 @@
         <property name="enableNativeTypeHint" type="bool" value="false"/>
       </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing"/>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"/>
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
     <rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable"/>
@@ -283,3 +283,4 @@
     <rule ref="Zend.Debug.CodeAnalyzer"/>
     <rule ref="Zend.Files.ClosingTag"/>
 </ruleset>
+
