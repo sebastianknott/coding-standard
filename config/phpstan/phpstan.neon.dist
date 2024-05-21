@@ -8,3 +8,12 @@ parameters:
     exceptions:
         check:
             tooWideThrowType: true
+
+    ignoreErrors:
+        -
+            message: '#Function \w+ invoked with \d+ parameters, 0 required\.#'
+            identifier: arguments.count
+            paths:
+                - */test/Unit/*
+                - */test/Functional/*
+                - */test/System/*
