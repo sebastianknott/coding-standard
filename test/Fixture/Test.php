@@ -10,10 +10,8 @@ class Test
      * Das ist ein Test.
      *
      * @param string $meinTest asdqwe
-     *
-     * @return void
      */
-    public function einTest(string $meinTest)
+    public function einTest(string $meinTest): string
     {
         return $meinTest;
     }
