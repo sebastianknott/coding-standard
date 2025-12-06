@@ -45,9 +45,6 @@
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
     <rule ref="Generic.Commenting.Fixme"/>
     <rule ref="Generic.Commenting.Todo"/>
-    <rule ref="Generic.Debug.ClosureLinter"/>
-    <rule ref="Generic.Debug.CSSLint"/>
-    <rule ref="Generic.Debug.JSHint"/>
     <rule ref="Generic.Files.InlineHTML"/>
     <rule ref="Generic.Files.LineLength">
         <properties>
@@ -59,32 +56,97 @@
     <rule ref="Generic.Files.OneInterfacePerFile"/>
     <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
-    <rule ref="Generic.Functions.CallTimePassByReference"/>
     <rule ref="Generic.Metrics.NestingLevel"/>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
-            <property name="forbiddenFunctions"
-                      type="array"
-                      value="sizeof=>count,delete=>unset,print=>echo,is_null=>null,create_function=>null,ob_end_flush=>null,chop=>rtrim,close=>closedir,die=>exit,diskfreespace=>disk_free_space,doubleval=>floatval,fputs=>fwrite,gzputs=>gzwrite,i18n_convert=>mb_convert_encoding,i18n_discover_encoding=>mb_detect_encoding,i18n_http_input=>mb_http_input,i18n_http_output=>mb_http_output,i18n_internal_encoding=>mb_internal_encoding,i18n_ja_jp_hantozen=>mb_convert_kana,i18n_mime_header_decode=>mb_decode_mimeheader,i18n_mime_header_encode=>mb_encode_mimeheader,imap_create=>imap_createmailbox,imap_fetchtext=>imap_body,imap_getmailboxes=>imap_list_full,imap_getsubscribed=>imap_lsub_full,imap_header=>imap_headerinfo,imap_listmailbox=>imap_list,imap_listsubscribed=>imap_lsub,imap_rename=>imap_renamemailbox,imap_scan=>imap_listscan,imap_scanmailbox=>imap_listscan,ini_alter=>ini_set,is_double=>is_float,is_integer=>is_int,is_long=>is_int,is_real=>is_float,is_writeable=>is_writable,join=>implode,key_exists=>array_key_exists,ldap_close=>ldap_unbind,magic_quotes_runtime=>set_magic_quotes_runtime,mbstrcut=>mb_strcut,mbstrlen=>mb_strlen,mbstrpos=>mb_strpos,mbstrrpos=>mb_strrpos,mbsubstr=>mb_substr,mysql=>mysql_db_query,mysql_createdb=>mysql_create_db,mysql_db_name=>mysql_result,mysql_dbname=>mysql_result,mysql_dropdb=>mysql_drop_db,mysql_fieldflags=>mysql_field_flags,mysql_fieldlen=>mysql_field_len,mysql_fieldname=>mysql_field_name,mysql_fieldtable=>mysql_field_table,mysql_fieldtype=>mysql_field_type,mysql_freeresult=>mysql_free_result,mysql_listdbs=>mysql_list_dbs,mysql_listfields=>mysql_list_fields,mysql_listtables=>mysql_list_tables,mysql_numfields=>mysql_num_fields,mysql_numrows=>mysql_num_rows,mysql_selectdb=>mysql_select_db,mysql_tablename=>mysql_result,odbc_do=>odbc_exec,odbc_field_precision=>odbc_field_len,pdf_add_outline=>pdf_add_bookmark,pg_clientencoding=>pg_client_encoding,pg_setclientencoding=>pg_set_client_encoding,pos=>current,recode=>recode_string,show_source=>highlight_file,sizeof=>count,snmpwalkoid=>snmprealwalk,strchr=>strstr,xptr_new_context=>xpath_new_context,exit=>null,eval=>null"
-            />
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count"/>
+                <element key="delete" value="unset"/>
+                <element key="print" value="echo"/>
+                <element key="is_null" value="null"/>
+                <element key="create_function" value="null"/>
+                <element key="ob_end_flush" value="null"/>
+                <element key="chop" value="rtrim"/>
+                <element key="close" value="closedir"/>
+                <element key="die" value="exit"/>
+                <element key="diskfreespace" value="disk_free_space"/>
+                <element key="doubleval" value="floatval"/>
+                <element key="fputs" value="fwrite"/>
+                <element key="gzputs" value="gzwrite"/>
+                <element key="i18n_convert" value="mb_convert_encoding"/>
+                <element key="i18n_discover_encoding" value="mb_detect_encoding"/>
+                <element key="i18n_http_input" value="mb_http_input"/>
+                <element key="i18n_http_output" value="mb_http_output"/>
+                <element key="i18n_internal_encoding" value="mb_internal_encoding"/>
+                <element key="i18n_ja_jp_hantozen" value="mb_convert_kana"/>
+                <element key="i18n_mime_header_decode" value="mb_decode_mimeheader"/>
+                <element key="i18n_mime_header_encode" value="mb_encode_mimeheader"/>
+                <element key="imap_create" value="imap_createmailbox"/>
+                <element key="imap_fetchtext" value="imap_body"/>
+                <element key="imap_getmailboxes" value="imap_list_full"/>
+                <element key="imap_getsubscribed" value="imap_lsub_full"/>
+                <element key="imap_header" value="imap_headerinfo"/>
+                <element key="imap_listmailbox" value="imap_list"/>
+                <element key="imap_listsubscribed" value="imap_lsub"/>
+                <element key="imap_rename" value="imap_renamemailbox"/>
+                <element key="imap_scan" value="imap_listscan"/>
+                <element key="imap_scanmailbox" value="imap_listscan"/>
+                <element key="ini_alter" value="ini_set"/>
+                <element key="is_double" value="is_float"/>
+                <element key="is_integer" value="is_int"/>
+                <element key="is_long" value="is_int"/>
+                <element key="is_real" value="is_float"/>
+                <element key="is_writeable" value="is_writable"/>
+                <element key="join" value="implode"/>
+                <element key="key_exists" value="array_key_exists"/>
+                <element key="ldap_close" value="ldap_unbind"/>
+                <element key="magic_quotes_runtime" value="set_magic_quotes_runtime"/>
+                <element key="mbstrcut" value="mb_strcut"/>
+                <element key="mbstrlen" value="mb_strlen"/>
+                <element key="mbstrpos" value="mb_strpos"/>
+                <element key="mbstrrpos" value="mb_strrpos"/>
+                <element key="mbsubstr" value="mb_substr"/>
+                <element key="mysql" value="mysql_db_query"/>
+                <element key="mysql_createdb" value="mysql_create_db"/>
+                <element key="mysql_db_name" value="mysql_result"/>
+                <element key="mysql_dbname" value="mysql_result"/>
+                <element key="mysql_dropdb" value="mysql_drop_db"/>
+                <element key="mysql_fieldflags" value="mysql_field_flags"/>
+                <element key="mysql_fieldlen" value="mysql_field_len"/>
+                <element key="mysql_fieldname" value="mysql_field_name"/>
+                <element key="mysql_fieldtable" value="mysql_field_table"/>
+                <element key="mysql_fieldtype" value="mysql_field_type"/>
+                <element key="mysql_freeresult" value="mysql_free_result"/>
+                <element key="mysql_listdbs" value="mysql_list_dbs"/>
+                <element key="mysql_listfields" value="mysql_list_fields"/>
+                <element key="mysql_listtables" value="mysql_list_tables"/>
+                <element key="mysql_numfields" value="mysql_num_fields"/>
+                <element key="mysql_numrows" value="mysql_num_rows"/>
+                <element key="mysql_selectdb" value="mysql_select_db"/>
+                <element key="mysql_tablename" value="mysql_result"/>
+                <element key="odbc_do" value="odbc_exec"/>
+                <element key="odbc_field_precision" value="odbc_field_len"/>
+                <element key="pdf_add_outline" value="pdf_add_bookmark"/>
+                <element key="pg_clientencoding" value="pg_client_encoding"/>
+                <element key="pg_setclientencoding" value="pg_set_client_encoding"/>
+                <element key="pos" value="current"/>
+                <element key="recode" value="recode_string"/>
+                <element key="show_source" value="highlight_file"/>
+                <element key="snmpwalkoid" value="snmprealwalk"/>
+                <element key="strchr" value="strstr"/>
+                <element key="xptr_new_context" value="xpath_new_context"/>
+                <element key="exit" value="null"/>
+                <element key="eval" value="null"/>
+            </property>
         </properties>
     </rule>
     <rule ref="Generic.PHP.NoSilencedErrors"/>
     <rule ref="Generic.PHP.SAPIUsage"/>
     <rule ref="Generic.VersionControl.SubversionProperties"/>
-
-    <rule ref="MySource.Channels.DisallowSelfActions"/>
-    <rule ref="MySource.Channels.IncludeOwnSystem"/>
-    <rule ref="MySource.Channels.UnusedSystem"/>
-    <rule ref="MySource.Debug.DebugCode"/>
-    <rule ref="MySource.Debug.FirebugConsole"/>
-    <rule ref="MySource.Objects.CreateWidgetTypeCallback"/>
-    <rule ref="MySource.Objects.DisallowNewWidget"/>
-    <rule ref="MySource.PHP.EvalObjectFactory"/>
-    <rule ref="MySource.Strings.JoinStrings"/>
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
 
     <rule ref="PEAR.Commenting.InlineComment"/>
     <rule ref="PEAR.Formatting.MultiLineAssignment"/>
@@ -243,7 +305,6 @@
         <exclude name="Squiz.Classes.ClassDeclaration.SpaceBeforeKeyword" />
     </rule>
     <rule ref="Squiz.Classes.ClassFileName"/>
-    <rule ref="Squiz.Classes.DuplicateProperty"/>
     <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
     <rule ref="Squiz.Classes.SelfMemberReference"/>
     <rule ref="Squiz.Commenting.EmptyCatchComment"/>
@@ -256,8 +317,6 @@
     <rule ref="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore">
         <severity>0</severity>
     </rule>
-    <rule ref="Squiz.Objects.DisallowObjectStringIndex"/>
-    <rule ref="Squiz.Objects.ObjectMemberComma"/>
     <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
     <rule ref="Squiz.Operators.ValidLogicalOperators"/>
     <rule ref="Squiz.PHP.CommentedOutCode">
@@ -279,13 +338,9 @@
     <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
     <rule ref="Squiz.Strings.EchoedStrings"/>
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
-    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing"/>
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
 
-    <rule ref="Zend.Debug.CodeAnalyzer"/>
     <rule ref="Zend.Files.ClosingTag"/>
 </ruleset>
-
