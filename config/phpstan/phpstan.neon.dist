@@ -17,3 +17,4 @@ parameters:
                 - */test/Unit/*
                 - */test/Functional/*
                 - */test/System/*
+        - '#Call to an undefined method Mockery\\ExpectationInterface|Mockery\\ExpectsHigherOrderMessage#'
