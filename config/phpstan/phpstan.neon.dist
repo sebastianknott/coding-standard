@@ -18,3 +18,4 @@ parameters:
                 - */test/Functional/*
                 - */test/System/*
         - '#Call to an undefined method Mockery\\ExpectationInterface|Mockery\\ExpectsHigherOrderMessage#'
+        - '#Mockery\\MockInterface given#'
