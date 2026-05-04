@@ -213,6 +213,7 @@
         <properties>
             <property name="checkPromoted" type="bool" value="true"/>
             <property name="allowReadonly" type="bool" value="true"/>
+            <property name="allowNonPublicSet" type="bool" value="true"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Classes.MethodSpacing"/>
