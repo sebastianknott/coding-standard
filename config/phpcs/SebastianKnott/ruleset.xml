@@ -191,10 +191,14 @@
                 <element value="private properties"/>
 
                 <element value="constructor"/>
+                <element value="static constructors"/>
+                <element value="destructor"/>
                 <element value="phpunit before"/>
                 <element value="inject method"/>
                 <element value="inject methods"/>
-                <element value="methods"/>
+                <element value="all public methods"/>
+                <element value="all protected methods"/>
+                <element value="all private methods"/>
                 <element value="magic methods"/>
             </property>
         </properties>
